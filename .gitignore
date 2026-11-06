@@ -1,0 +1,22 @@
+# Vivado build, run, and simulation artifacts
+*.runs/
+*.sim/
+*.gen/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.ioplanning/
+*.Xil/
+
+# Log and temporary status files
+*.log
+*.jou
+*.str
+*.pb
+*.wdb
+*.jou
+
+# Editor and OS junk
+.DS_Store
+Thumbs.db
+.vscode/
