@@ -27,16 +27,16 @@ module vga_ctrl(
     output      video_on, vsync, hsync 
     );
     
-    // VESA Specification Constants
+    // VESA specification constants
     
-    // Horizontal Sync Components
+    // Horizontal sync components
     localparam h_active_video = 10'b1010000000; // 640
     localparam h_front_porch = 5'b10010; // 18
     localparam h_pulse = 7'b1011100; // 92
     localparam h_back_porch = 6'b110010; // 50
     localparam h_total_timing = h_active_video + h_front_porch + h_back_porch + h_pulse;
     
-    // Vertical Sync Components
+    // Vertical sync components
     localparam v_active_video = 9'b111100000; // 480
     localparam v_front_porch = 4'b1010; // 10
     localparam v_pulse = 2'b10; // 2
@@ -46,7 +46,7 @@ module vga_ctrl(
     reg [9:0] pixel_x_pos = 10'b0;
     reg [9:0] pixel_y_pos = 10'b0;
     
-    // VGA Pixel Generation Logic
+    // VGA pixel generation logic
     always @(posedge clk_25MHz) begin
         if (reset) begin
             pixel_x_pos <= 1'b0;
