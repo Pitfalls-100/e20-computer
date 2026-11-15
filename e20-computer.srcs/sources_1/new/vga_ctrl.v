@@ -30,17 +30,17 @@ module vga_ctrl(
     // VESA specification constants
     
     // Horizontal sync components
-    localparam h_active_video = 10'b1010000000; // 640
-    localparam h_front_porch = 5'b10010; // 18
-    localparam h_pulse = 7'b1011100; // 92
-    localparam h_back_porch = 6'b110010; // 50
+    localparam h_active_video = 10'd640;
+    localparam h_front_porch = 5'd18;
+    localparam h_pulse = 7'd92;
+    localparam h_back_porch = 6'd50;
     localparam h_total_timing = h_active_video + h_front_porch + h_back_porch + h_pulse;
     
     // Vertical sync components
-    localparam v_active_video = 9'b111100000; // 480
-    localparam v_front_porch = 4'b1010; // 10
-    localparam v_pulse = 2'b10; // 2
-    localparam v_back_porch = 6'b100001; // 33
+    localparam v_active_video = 10'd480;
+    localparam v_front_porch = 4'd10;
+    localparam v_pulse = 2'd2;
+    localparam v_back_porch = 6'd33;
     localparam v_total_timing = v_active_video + v_front_porch + v_back_porch + v_pulse;
     
     reg [9:0] pixel_x_pos = 10'b0;
