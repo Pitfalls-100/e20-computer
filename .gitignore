@@ -1,4 +1,5 @@
-# Vivado build, run, and simulation artifacts
+# Vivado project, build, run, and simulation artifacts
+*.xpr
 *.runs/
 *.sim/
 *.gen/
